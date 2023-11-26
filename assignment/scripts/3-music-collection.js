@@ -6,7 +6,7 @@ let myCollection = [];
 
 // Create a function named addToCollection with parameters collection, title, artist, yearPublished 
 
-function addToCollection(collection, title, artist, yearPublished){
+function addToCollection( title, artist, yearPublished){
 
   const newMusic = { //take in the albums title, artist, yearPublished as parameters and create a new object
     title: title,
@@ -19,12 +19,12 @@ return newMusic;
 
 
 //Use and Test the addToCollection function:
-addToCollection( "Something In the Orange", "Zach Bryan", "2023");
-addToCollection( "Cruel Summer", "Taylor Swift", "2022");
-addToCollection( "Wait So Long", "Trampled by Turtles", "2009");
-addToCollection( "Thriller", "Michael Jackson", "1987");
-addToCollection( "Show Love", "Kiana Lede", "2018");
-addToCollection( "For Tonight", "Giveon", "2022");
+addToCollection( "Something In the Orange", "Zach Bryan", 2023);
+addToCollection( "Cruel Summer", "Taylor Swift", 2022);
+addToCollection( "Wait So Long", "Trampled by Turtles", 2009);
+addToCollection( "Thriller", "Michael Jackson", 1987);
+addToCollection( "Show Love", "Kiana Lede", 2018);
+addToCollection( "For Tonight", "Giveon", 2022);
 
 
 console.log("Testing myCollection[0]", myCollection[0]);
@@ -35,18 +35,29 @@ console.log("Testing myCollection[4]", myCollection[4]);
 console.log("Testing myCollection[5]", myCollection[5]);
 
 
-
-
-
-
-
-
-
-
-//Add 6 albums to the myCollection array. Aim to have a mix of both same and different artists and published years. (Feel free to share your musical interests, or make stuff up. Totally fine either way.)
-//console.log each album as added using the function's returned value.
-//After all are added, console.log the myCollection array.
+//Create a function named showCollection. 
+function showCollection(album)){
+  for(let i=0; i<myCollection.length; i++){
+    console.log(myCollection[i]);
+  }
+  return collection;
   
+}
+
+ 
+
+//Take in a collection parameter. (This allows it to be reused to show any array of album objects.)
+//Loop through the collection and console.log each album's information formatted within a single string, like: TITLE by ARTIST, published in YEAR.
+//Test the showCollection function.
+
+
+
+
+
+
+
+
+
 
 
 

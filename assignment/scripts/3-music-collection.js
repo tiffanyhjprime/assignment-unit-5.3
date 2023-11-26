@@ -13,12 +13,30 @@ function addToCollection(collection, title, artist, yearPublished){
     artist: artist,
     yearPublished: yearPublished,
   };
-  collection.push(newMusic); //add the new object to the end of the collection array
+  myCollection.push(newMusic); //add the new object to the end of the collection array
 return newMusic;
 };
 
 
 //Use and Test the addToCollection function:
+addToCollection( "Something In the Orange", "Zach Bryan", "2023");
+addToCollection( "Cruel Summer", "Taylor Swift", "2022");
+addToCollection( "Wait So Long", "Trampled by Turtles", "2009");
+addToCollection( "Thriller", "Michael Jackson", "1987");
+addToCollection( "Show Love", "Kiana Lede", "2018");
+addToCollection( "For Tonight", "Giveon", "2022");
+
+
+console.log("Testing myCollection[0]", myCollection[0]);
+console.log("Testing myCollection[1]", myCollection[1]);
+console.log("Testing myCollection[2]", myCollection[2]);
+console.log("Testing myCollection[3]", myCollection[3]);
+console.log("Testing myCollection[4]", myCollection[4]);
+console.log("Testing myCollection[5]", myCollection[5]);
+
+
+
+
 
 
 

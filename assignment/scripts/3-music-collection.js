@@ -6,7 +6,7 @@ let myCollection = [];
 
 // Create a function named addToCollection with parameters collection, title, artist, yearPublished 
 
-function addToCollection( title, artist, yearPublished){
+function addToCollection( myCollection, title, artist, yearPublished){
 
   const newMusic = { //take in the albums title, artist, yearPublished as parameters and create a new object
     title: title,
@@ -19,12 +19,12 @@ return newMusic;
 
 
 //Use and Test the addToCollection function:
-addToCollection( "Something In the Orange", "Zach Bryan", 2023);
-addToCollection( "Cruel Summer", "Taylor Swift", 2022);
-addToCollection( "Wait So Long", "Trampled by Turtles", 2009);
-addToCollection( "Thriller", "Michael Jackson", 1987);
-addToCollection( "Show Love", "Kiana Lede", 2018);
-addToCollection( "For Tonight", "Giveon", 2022);
+addToCollection(myCollection, "Something In the Orange", "Zach Bryan", 2023);
+addToCollection( myCollection, "Cruel Summer", "Taylor Swift", 2022);
+addToCollection( myCollection, "Wait So Long", "Trampled by Turtles", 2009);
+addToCollection( myCollection, "Thriller", "Michael Jackson", 1987);
+addToCollection( myCollection, "Show Love", "Kiana Lede", 2018);
+addToCollection( myCollection, "For Tonight", "Giveon", 2022);
 
 
 console.log("Testing myCollection[0]", myCollection[0]);
@@ -36,52 +36,32 @@ console.log("Testing myCollection[5]", myCollection[5]);
 
 
 //Create a function named showCollection. 
-function showCollection(album)){
-  for(let i=0; i<myCollection.length; i++){
-    console.log(myCollection[i]);
-  }
-  return collection;
+function showCollection(album){
+  //Take in a collection parameter album's information formatted within a single string, like: TITLE by ARTIST, published in YEAR.
+  //Loop through the collection and console.log each
+  //information formatted within a single string, like: TITLE by ARTIST, published in YEAR.
   
+  for(let i = 0; i < album.length; i++){
+    console.log(`${album[i].title} by ${album[i].artist}, published in ${album[i].yearPublished}`);
+  }
+}
+//Test the showCollection function.
+showCollection(myCollection);
+
+
+// Create a function to search collection by artist(string)
+function findByArtist(collection, artist) {
+  let results = [];
+  for (let musician of collection) {
+    if (musician.artist === artist) {
+      results.push(musician);
+      console.log("who are the artists", results)
+    }
+  }
+  return results;
 }
 
- 
-
-//Take in a collection parameter. (This allows it to be reused to show any array of album objects.)
-//Loop through the collection and console.log each album's information formatted within a single string, like: TITLE by ARTIST, published in YEAR.
-//Test the showCollection function.
-
-
-
-
-
-
-
-
-
-
-
-
-
-//return the newly created object
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+findByArtist(myCollection);
 
 
 
